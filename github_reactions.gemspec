@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["over.rye@gmail.com"]
 
   spec.summary       = "Simple CLI to summary GitHub reactions in a repository"
-  spec.description   = "Simple CLI to summary GitHub reactions in a repository"
+  spec.description   = "A simple command line tool to show numbers of reactions on GitHub issues and pull requests."
   spec.homepage      = "https://github.com/ohbarye/github_reactions"
   spec.license       = "MIT"
 
@@ -22,6 +22,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "thor"
+  spec.add_dependency "graphql-client"
+  spec.add_dependency "terminal-table"
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"

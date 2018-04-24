@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'thor'
+require 'github_reactions/visualizer'
+require 'github_reactions/query_executor'
 
 module GithubReactions
   class CLI < Thor
@@ -9,7 +11,10 @@ module GithubReactions
 
     desc "get", "Get reactions in a specified repository"
     def get(repository_name)
-      puts repository_name
+      Visualizer.visualize(
+        repository_name,
+        QueryExecutor.get(repository_name)
+      )
     end
 
     desc "version", "Show current version"

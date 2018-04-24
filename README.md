@@ -1,43 +1,38 @@
-# GithubReactions
+# GitHub Reactions
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/github_reactions`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'github_reactions'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install github_reactions
+A simple command line tool to show numbers of reactions on GitHub issues and pull requests.
 
 ## Usage
 
-TODO: Write usage instructions here
+```shell
+$ gem install github_reactions
 
-## Development
+$ ACCESS_TOKEN=your-github-access-token github_reactions get github/graphql-client
+# Alternatively, `ghr` is totally the same as `github_reactions` command
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+The command results below:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```shell
+Fetched 100 / 145... 👍
+Fetched 145 / 145... ❤
++-----------------------+-----------------------+
+| github/graphql-client has 55 reactions so far |
++-----------------------+-----------------------+
+| Emoji                 | Count                 |
++-----------------------+-----------------------+
+| HEART                 |                    21 |
+| HOORAY                |                     7 |
+| THUMBS_UP             |                    26 |
+| THUMBS_DOWN           |                     1 |
++-----------------------+-----------------------+
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/github_reactions. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ohbarye/github_reactions. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Code of Conduct
-
-Everyone interacting in the GithubReactions project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/github_reactions/blob/master/CODE_OF_CONDUCT.md).
